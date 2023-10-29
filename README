@@ -1,0 +1,25 @@
+   Before compiling XMoria, you must change the following path constants in
+two of the header files:
+config.h: MORIA_SAV
+          MORIA_HOU
+          MORIA_TOP
+          MORIA_HELP
+          MORIA_ORIG_HELP
+          MORIA_WIZ_HELP
+          MORIA_OWIZ_HELP
+          MORIA_WELCOME
+          MORIA_LOG
+          MORIA_VER
+xmoria.h: BITMAP_PATH
+   These are vital to making XMoria run correctly, and are currently set for
+MY account.  The only part of the strings that should be the same is the last
+section.  Everything else depends on your account.  Failure to do this will
+result in a seemingly unrelated X error in a function noone has ever heard of.
+This is from when the program tries to load the bitmaps and can't find them.
+
+   Another possible problem can be averted by typing "xmkmf" before trying to
+compile.  This rebuilds the "Makefile" to include subtle differences in your
+system.
+
+	Joel Lord
+	lordj@rpi.edu

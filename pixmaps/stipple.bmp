@@ -1,0 +1,5 @@
+#define stipple_width 2
+#define stipple_height 2
+static char stipple_bits[] = {
+   0x01, 0x02};
+

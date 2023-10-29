@@ -1,0 +1,24 @@
+# @(#)Imakefile	23.7 91/06/11
+# Imakefile - xlock
+#
+        DEFINES = -DDEF_FILESEARCHPATH=\"$(LIBDIR)/%T/%N%S\" -DSTARSIZE=2
+        DEPLIBS = $(DEPXLIB)
+LOCAL_LIBRARIES = $(XLIB)
+       LINTLIBS = $(LINTXLIB)
+  SYS_LIBRARIES = -lm
+           SRCS = xmoria.c save.c misc2.c variable.c treasure.c sets.c \
+			moria1.c monsters.c unix.c misc1.c signals.c desc.c \
+			io.c scrolls.c spells.c moria2.c recall.c creature.c \
+			potions.c staffs.c wands.c magic.c prayer.c dungeon.c \
+			undef.c eat.c wizard.c store1.c store2.c help.c \
+			files.c generate.c rnd.c create.c death.c xprogs.c
+           OBJS = xmoria.o save.o variable.o treasure.o sets.o creature.o \
+			moria1.o monsters.o unix.o misc1.o signals.o desc.o \
+			io.o scrolls.o spells.o moria2.o recall.o misc2.o \
+			potions.o staffs.o wands.o magic.o prayer.o dungeon.o \
+			undef.o eat.o wizard.o store1.o store2.o help.o \
+			files.o generate.o rnd.o create.o death.o xprogs.o
+
+ComplexProgramTarget(xmoria)
+InstallAppDefaults(Xmoria)
+
